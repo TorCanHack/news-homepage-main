@@ -1,0 +1,276 @@
+$lightVermillion: #F15D51;
+$darkSpaceBlue: #00001A;
+$gunMetal: #5E607A;
+$yellow: #E9AA52;
+$almostWhite: #FFFDFA;
+$silver: #C5C6CE;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+
+    header {
+
+        
+        width: min(95%, 375px);
+        height: 28px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem 0;
+        padding: 0 1rem;
+        
+
+        .logo {
+
+            margin-right: auto;
+        }
+        
+
+        nav {
+
+            display: flex;
+            flex-direction: column;
+            height: 669px;
+            z-index: 11;
+            
+            
+
+            .menu-btn {
+
+                margin-left: auto;
+                background-color: white;
+                border: none;
+                z-index: 20;
+                
+                
+
+                .icon-menu-close {
+                    display: none;
+                    position: relative;
+                    right: 1.5rem;
+                }
+            }
+
+            .drop-down-container {
+
+                display: none;
+                position: relative;
+                left: 1rem;
+                bottom: 5rem;
+                width: 300px;
+                height: 600px;
+                z-index: 10;
+                background-color: white;
+
+                ul {
+
+                    margin-top: 6rem;
+
+                    li {
+
+                        list-style: none;
+                        font-size: 1.125rem;
+                        margin-bottom: 1rem;
+
+                        a {
+                            text-decoration: none;
+                            color: $darkSpaceBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: min(95%, 375px);
+        padding: 0 1rem;
+
+        .main-section{
+
+            width: 343px;
+
+            .hero-mobile {
+                
+                height: 300px;
+            }
+
+            .hero-desktop {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                line-height: 40px;
+                color: $darkSpaceBlue;
+            }
+
+            p {
+                font-size: 0.938rem;
+                line-height: 26px;
+                color: $gunMetal;
+            }
+
+            button {
+
+                width: 185px;
+                height: 48px;
+                background-color: $lightVermillion;
+                border: none;
+                font-size: 0.875rem;
+                line-height: 24px;
+                letter-spacing: 4.3px;
+                color: $almostWhite;
+            }
+        }
+
+        .new {
+            background-color: $darkSpaceBlue;
+            width: 343px;
+            height: 489px;
+            padding: 1rem;
+            margin-top: 2rem;
+
+            h2 {
+
+                color: $yellow;
+                font-size: 2rem;
+                line-height: 32px;
+            }
+
+            article {
+
+                border-bottom: 1px solid $gunMetal;
+
+                h3 {
+
+                    font-size: 1.25rem;
+                    color: $almostWhite;
+                }
+
+                p {
+                    font-size: 0.938rem;
+                    color: $silver;
+                    margin-bottom: 1rem;
+                }
+            }
+
+ 
+
+        }
+
+        .top-stories {
+
+            width: 343px;
+            height: 451px;
+            margin: 2rem 0;
+
+
+            article {
+                width: 343px;
+                height: 129px;
+                display: grid;
+                grid-template-columns: 100px 219px;
+                grid-template-rows: 129px;
+                gap: 1.5rem;
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100px;
+                    
+
+                }
+                
+                div {
+
+                    height: 129px;
+                    
+                    
+
+                    h3 {
+
+                        font-size: 1rem;
+                        color: $darkSpaceBlue;
+                        margin-top: -4px;
+
+                        span {
+                            font-size: 2rem;
+                            color: $silver;
+                            
+                        }
+                    }
+
+                    p {
+                        font-size: 0.938rem;
+                        line-height: 26px;
+                        color: $gunMetal;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    body.overlay-active::before {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: fixed; 
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        display: block;
+       
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    body {
+
+        header {
+
+            width: 1440px;
+        }
+
+        main {
+
+            width: 1440px;
+
+            .main-section {
+
+                width: 730px;
+
+                .hero-mobile {
+                    display: none;
+                }
+
+                .hero-desktop {
+
+                    display: inline;
+                }
+            }
+        }
+    }
+    
+}
